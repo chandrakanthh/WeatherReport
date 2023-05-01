@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="forecastRes"
+            type="com.example.weatherreport.data.models.ForecastList" />
+        <variable
+            name="utils"
+            type="com.example.weatherreport.ui.utils.AndroidUtilsKt" />
+        <import type="com.example.weatherreport.ui.utils.AndroidViewUtilsKt"/>
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimens_40"
+    android:layout_marginVertical="@dimen/dimens_10">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{forecastRes.day}"
+        android:textColor="#697F97"
+        android:fontFamily="@font/roboto_regular"
+        android:id="@+id/dayNameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/maxTempTV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/sp_16"
+        />
+
+    <TextView
+        android:id="@+id/maxTempTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:lineSpacingExtra="@dimen/dimens_2"
+        android:text="@{AndroidViewUtilsKt.setChangeValue(maxTempTV,forecastRes.main.temp)}"
+        android:textColor="#697F97"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tempTypeIV"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu"
+        android:id="@+id/tempTypeIV"
+        android:contentDescription="@string/weather_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

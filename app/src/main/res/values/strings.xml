@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherReport</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up_with_google">Sign up with Google</string>
+    <string name="change_celsius"> %1$s\u00B0</string>
+    <string name="weather_type">weather type</string>
+    <string name="sun_rise_str">sun rise</string>
+    <string name="city_image_str">city image</string>
+</resources>
