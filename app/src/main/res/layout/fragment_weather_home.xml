@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/day_gradient_bg"
-        tools:context=".ui.home.WeatherHomeFragment">
+        tools:context=".ui.home.WeatherHomeFragment"
+        android:fitsSystemWindows="true">
         <ImageView
             android:id="@+id/dayBgImage"
             android:layout_width="wrap_content"
